@@ -1,0 +1,42 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Node dependencies & builds
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Environment variables & secrets (CRITICAL: Never commit credentials!)
+.env
+**/.env
+*.env
+!*.env.example
+
+# Testing & caches
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# Editor & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Scratch and temporary scripts
+scratch/
+
+# Large Dataset files (>100MB; hosted on Google Drive / Hugging Face)
+*.csv
+!backend/tests/*.csv

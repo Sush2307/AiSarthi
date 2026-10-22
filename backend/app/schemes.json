@@ -1,0 +1,93 @@
+{
+  "_instructions": "Sourced strictly from official Government of India portals (MoHFW, NHA, NHM). Field values reflect primary policy documents.",
+  "schemes": [
+    {
+      "id": "pmjay",
+      "name": "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (PM-JAY)",
+      "official_url": "https://pmjay.gov.in",
+      "authority": "National Health Authority (NHA) / MoHFW",
+      "summary": "Flagship health assurance scheme providing a health cover of ₹5 lakh per family per year for secondary and tertiary care hospitalisation to vulnerable families.",
+      "eligibility": "Bottom 40% vulnerable population identified through Socio-Economic Caste Census (SECC 2011) and expanded state beneficiary lists.",
+      "benefits": "Cashless and paperless access to services across 28,000+ empanelled public and private hospitals nationwide, covering pre-hospitalisation (3 days) and post-hospitalisation (15 days).",
+      "how_to_apply": "Verification via official portal (mera.pmjay.gov.in), Ayushman App, or at any empanelled hospital / Common Service Centre (CSC) with Aadhaar and Ration Card.",
+      "last_verified": "2024-04-15"
+    },
+    {
+      "id": "pmsma",
+      "name": "Pradhan Mantri Surakshit Matritva Abhiyan (PMSMA)",
+      "official_url": "https://pmsma.mohfw.gov.in",
+      "authority": "Ministry of Health and Family Welfare (MoHFW)",
+      "summary": "National initiative guaranteeing assured, comprehensive and quality antenatal care free of cost to all pregnant women on the 9th of every month.",
+      "eligibility": "All pregnant women in their 2nd or 3rd trimesters visiting designated public health facilities on the 9th of every month.",
+      "benefits": "Minimum package of antenatal care services including specialist consultation, sonography, blood pressure check, haemoglobin and blood sugar diagnostics, and red-sticker high-risk identification.",
+      "how_to_apply": "Walk-in registration on the 9th of each month at any designated Primary Health Centre (PHC), Community Health Centre (CHC), Sub-District or District Hospital.",
+      "last_verified": "2024-03-20"
+    },
+    {
+      "id": "jsy",
+      "name": "Janani Suraksha Yojana (JSY)",
+      "official_url": "https://nhm.gov.in",
+      "authority": "National Health Mission (NHM) / MoHFW",
+      "summary": "Safe motherhood intervention under the National Health Mission promoting institutional delivery among poor pregnant women through conditional cash transfers.",
+      "eligibility": "All pregnant women delivering in government health centres or accredited private health facilities in Low Performing States (LPS); BPL/SC/ST pregnant women in High Performing States (HPS).",
+      "benefits": "Cash assistance ranging from ₹1,000 to ₹1,400 for rural mothers and ₹900 to ₹1,000 for urban mothers upon institutional delivery, plus ASHA incentives for escort and delivery support.",
+      "how_to_apply": "Registration at nearest Anganwadi centre or Sub-centre during early pregnancy with Mother and Child Protection (MCP) card.",
+      "last_verified": "2024-02-10"
+    },
+    {
+      "id": "jssk",
+      "name": "Janani Shishu Suraksha Karyakram (JSSK)",
+      "official_url": "https://nhm.gov.in",
+      "authority": "National Health Mission (NHM) / MoHFW",
+      "summary": "Entitlement framework ensuring completely cashless delivery and post-natal care for pregnant women and sick neonates in all public health facilities.",
+      "eligibility": "All pregnant women delivering in public health institutions and sick infants accessing public healthcare up to 1 year of age.",
+      "benefits": "Zero out-of-pocket expenses: free and cashless delivery (including C-section), free drugs, diagnostics, blood transfusion, diet during hospital stay, and free transport from home to facility and return.",
+      "how_to_apply": "Automatic entitlement upon admission to any public healthcare institution (PHC, CHC, District Hospital, Medical College).",
+      "last_verified": "2024-03-01"
+    },
+    {
+      "id": "rbsk",
+      "name": "Rashtriya Bal Swasthya Karyakram (RBSK)",
+      "official_url": "https://rbsk.gov.in",
+      "authority": "Ministry of Health and Family Welfare (MoHFW)",
+      "summary": "Universal child health screening and early intervention initiative aimed at improving the overall survival and quality of life for children from birth to 18 years.",
+      "eligibility": "Children aged 0–18 years: newborn screening at public health facilities, preschoolers (0–6 years) screened at Anganwadi centres, and school children (6–18 years) in government/aided schools.",
+      "benefits": "Systematic screening across the '4Ds': Defects at birth, Deficiencies, Diseases, and Development delays including disability. Free secondary and tertiary management at District Early Intervention Centres (DEIC).",
+      "how_to_apply": "Screening is organized through dedicated mobile health teams visiting Anganwadis and schools bi-annually, with referrals to DEICs.",
+      "last_verified": "2024-01-18"
+    },
+    {
+      "id": "imi",
+      "name": "Mission Indradhanush / Intensified Mission Indradhanush (IMI 5.0)",
+      "official_url": "https://mohfw.gov.in",
+      "authority": "Universal Immunization Programme (UIP) / MoHFW",
+      "summary": "Strategic catch-up immunisation campaign targeting missed and drop-out children and pregnant women to achieve >90% full immunisation coverage across all districts.",
+      "eligibility": "Children under 5 years of age and pregnant women who have missed routine vaccine doses under the Universal Immunization Programme.",
+      "benefits": "Free life-saving vaccines protecting against 12 vaccine-preventable diseases including Diphtheria, Pertussis, Tetanus, Polio, Measles, Rubella, severe childhood Tuberculosis, Hepatitis B, Meningitis, and Pneumonia.",
+      "how_to_apply": "Available at routine immunization sessions, Anganwadi centres, health sub-centres, and dedicated outreach campaign sites.",
+      "last_verified": "2024-02-28"
+    },
+    {
+      "id": "abdm",
+      "name": "Ayushman Bharat Digital Mission (ABDM)",
+      "official_url": "https://abdm.gov.in",
+      "authority": "National Health Authority (NHA)",
+      "summary": "National digital infrastructure establishing longitudinal electronic health records, interoperable healthcare networks, and unique digital health IDs for citizens.",
+      "eligibility": "All Indian citizens seeking seamless digital access to their medical records across hospitals, clinics, and diagnostic labs.",
+      "benefits": "Creation of Ayushman Bharat Health Account (ABHA) 14-digit number, digital sharing of health records with doctor consent, paperless OP registrations via scan-and-share at participating hospitals.",
+      "how_to_apply": "Self-creation in under 1 minute via abha.abdm.gov.in or through the ABHA mobile app using Aadhaar or driving licence.",
+      "last_verified": "2024-04-05"
+    },
+    {
+      "id": "pmndp",
+      "name": "Pradhan Mantri National Dialysis Programme (PMNDP)",
+      "official_url": "https://nhm.gov.in",
+      "authority": "National Health Mission (NHM) / MoHFW",
+      "summary": "Public-Private Partnership initiative providing life-sustaining haemodialysis and peritoneal dialysis services in district hospital settings.",
+      "eligibility": "Patients suffering from end-stage renal disease (ESRD). Patients from Below Poverty Line (BPL) families receive 100% free treatment.",
+      "benefits": "Free hemodialysis sessions for BPL patients; non-BPL patients receive treatment at subsidized, pre-negotiated state rates with automated monitoring through the PMNDP portal.",
+      "how_to_apply": "Referral from nephrologist or government hospital medical officer with BPL verification and enrolment at empanelled district dialysis centres.",
+      "last_verified": "2024-03-12"
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    scrollbar-gutter: stable;
+  }
+
+  body {
+    background-color: #F6F7F2;
+    color: #172B24;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+
+  html.dark,
+  .dark,
+  .dark body {
+    background-color: #0A110E !important;
+    color: #EDF4F0 !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Manrope', 'Inter', -apple-system, sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  :focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 4px #145C45;
+  }
+
+  .dark :focus-visible {
+    box-shadow: 0 0 0 2px #0A110E, 0 0 0 4px #287D65;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #CED7CA;
+    border-radius: 9999px;
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background-color: #2D3F37;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #B4C1AF;
+  }
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background-color: #3F554C;
+  }
+}
+
+@layer components {
+  /* Surface and Cards */
+  .card {
+    @apply rounded-xl border border-ivory-300 bg-white p-5 shadow-subtle transition-colors duration-150;
+  }
+  .card-hover {
+    @apply hover:border-brand-400 hover:shadow-card transition-all duration-150 cursor-pointer;
+  }
+
+  /* Primary Button */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-brand-800 px-4 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-subtle transition-all duration-150 hover:bg-brand-900 active:scale-[0.99] disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  /* Secondary / Outline Button */
+  .btn-o {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-ivory-300 bg-white px-3.5 py-2 text-xs sm:text-sm font-medium text-pine-900 shadow-subtle transition-all duration-150 hover:bg-ivory-100 hover:border-ivory-400 active:scale-[0.99] disabled:opacity-50;
+  }
+
+  /* Ghost Button */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-xs sm:text-sm font-medium text-pine-600 transition-colors duration-150 hover:bg-ivory-200 hover:text-pine-900;
+  }
+
+  /* Inputs and Selects */
+  .input {
+    @apply rounded-lg border border-ivory-300 bg-white px-3.5 py-2 text-xs sm:text-sm text-pine-900 transition-all duration-150 placeholder:text-pine-400 focus:border-brand-700 focus:ring-1 focus:ring-brand-700;
+  }
+
+  /* Chip / Pill */
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-ivory-300 bg-white px-3 py-1.5 text-xs font-medium text-pine-800 shadow-subtle transition-all duration-150 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-900 active:scale-[0.99];
+  }
+
+  /* Muted Text */
+  .muted {
+    @apply text-pine-500;
+  }
+
+  /* Skeletons */
+  .skeleton {
+    @apply animate-pulse rounded-lg bg-ivory-200/80;
+  }
+
+  /* Page Entrance Transition */
+  .page-enter {
+    animation: fadeIn 180ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+/* Explicit Dark Mode Overrides to guarantee perfect contrast and prevent washed-out text */
+.dark header {
+  background-color: rgba(16, 26, 22, 0.96) !important;
+  border-bottom-color: #2D3F37 !important;
+}
+
+.dark .card {
+  background-color: #16231E !important;
+  border-color: #2D3F37 !important;
+  color: #EDF4F0 !important;
+}
+
+.dark .card-hover:hover {
+  border-color: #3D8C6C !important;
+}
+
+.dark .btn-o {
+  background-color: #16231E !important;
+  border-color: #2D3F37 !important;
+  color: #EDF4F0 !important;
+}
+
+.dark .btn-o:hover {
+  background-color: #1D2D27 !important;
+  border-color: #3F554C !important;
+}
+
+.dark .btn-ghost {
+  color: #ABC1B7 !important;
+}
+
+.dark .btn-ghost:hover {
+  background-color: #1D2D27 !important;
+  color: #FFFFFF !important;
+}
+
+.dark .input {
+  background-color: #101A16 !important;
+  border-color: #2D3F37 !important;
+  color: #EDF4F0 !important;
+}
+
+.dark .input::placeholder {
+  color: #829C91 !important;
+}
+
+.dark .chip {
+  background-color: #16231E !important;
+  border-color: #2D3F37 !important;
+  color: #D5E2DC !important;
+}
+
+.dark .chip:hover {
+  background-color: #1D2D27 !important;
+  border-color: #3D8C6C !important;
+  color: #FFFFFF !important;
+}
+
+.dark .muted {
+  color: #ABC1B7 !important;
+}
+
+.dark .skeleton {
+  background-color: rgba(29, 45, 39, 0.8) !important;
+}
+
+.dark select.input option {
+  background-color: #101A16 !important;
+  color: #EDF4F0 !important;
+}
+
+/* Recharts SVG tick and grid styles in dark mode */
+.dark .recharts-cartesian-axis-tick text {
+  fill: #ABC1B7 !important;
+}
+
+.dark .recharts-cartesian-grid line {
+  stroke: #2D3F37 !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .page-enter {
+    animation: none !important;
+  }
+}

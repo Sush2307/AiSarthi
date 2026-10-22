@@ -1,0 +1,8 @@
+
+torch==2.13.0
+transformers==4.53.3
+peft==0.21.2
+pandas
+huggingface_hub==0.36.0
+accelerate
+safetensors
