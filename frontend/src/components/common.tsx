@@ -180,7 +180,7 @@ export function CompareBar({
             margin={{ top: 6, right: 48, left: 10, bottom: 6 }}
           >
             <defs>
-              <linearGradient id="sarthiBarGrad" x1="0" y1="0" x2="1" y2="0">
+              <linearGradient id="infomedBarGrad" x1="0" y1="0" x2="1" y2="0">
                 <stop offset="0%" stopColor="#0d9488" stopOpacity={0.88} />
                 <stop offset="100%" stopColor="#059669" stopOpacity={1} />
               </linearGradient>
@@ -236,7 +236,7 @@ export function CompareBar({
             />
             <Bar
               dataKey="value"
-              fill="url(#sarthiBarGrad)"
+              fill="url(#infomedBarGrad)"
               radius={[0, 5, 5, 0]}
               maxBarSize={22}
             >
@@ -346,7 +346,7 @@ export function TrendLine({
   );
 }
 
-export function exportCsv(records: HealthRecord[], name = "ai-sarthi-healthcare-data.csv") {
+export function exportCsv(records: HealthRecord[], name = "infomed-healthcare-data.csv") {
   const h = ["state", "district", "year", "indicator", "value", "source"] as const;
   const esc = (v: unknown) => `"${String(v ?? "").replace(/"/g, '""')}"`;
   const csv = [h.join(","), ...records.map((r) => h.map((k) => esc(r[k])).join(","))].join("\n");

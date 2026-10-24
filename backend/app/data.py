@@ -13,7 +13,7 @@ STOP = {
     "metrics", "indicator", "indicators", "district", "districts", "state", "states",
     "parameter", "parameters", "value", "values", "number", "numbers", "level", "levels",
     "available", "record", "records", "how", "many", "much", "is", "in", "of", "to",
-    "can", "help", "me", "you", "ai", "sarthi", "please", "could", "would", "will",
+    "can", "help", "me", "you", "ai", "sarthi", "infomed", "please", "could", "would", "will",
     "this", "that", "these", "those", "have", "has", "had", "summarize", "summary",
     "explain", "explanation", "mean", "meaning", "results", "result", "retrieved",
     "healthcare", "health", "simple", "language", "terms", "say", "get", "there",
@@ -905,7 +905,7 @@ class Dataset:
         # Canonical reproducibility signature
         query_sig_payload = f"{canonical_ind}|{active_year}|{active_source}|{','.join(sorted(matched_locs))}"
         sig_hash = hashlib.sha256(query_sig_payload.encode()).hexdigest()[:16]
-        reproducibility_sig = f"SARTHI-QUERY-{sig_hash.upper()}"
+        reproducibility_sig = f"INFOMED-QUERY-{sig_hash.upper()}"
 
         methodology_text = (
             f"Deterministic comparative extraction of '{canonical_ind}' across {len(matched_rows)} verified location observations. "

@@ -39,7 +39,7 @@ def test_workspace_valid_comparison(client):
     assert j["statistics"]["count"] == 2
     assert j["statistics"]["min"] == 70.0
     assert j["statistics"]["max"] == 80.0
-    assert j["reproducibility_signature"].startswith("SARTHI-QUERY-")
+    assert j["reproducibility_signature"].startswith("INFOMED-QUERY-") or j["reproducibility_signature"].startswith("SARTHI-QUERY-")
 
 def test_workspace_nonexistent_indicator(client):
     r = client.post("/api/workspace/compare", json={

@@ -863,7 +863,7 @@ class DeterministicEvidenceProvider(BaseModelProvider):
             )
 
         lines.append(
-            "\nAll observations in AI Sarthi are deterministically extracted from these official government partitions without generative extrapolation."
+            "\nAll observations in InfoMed are deterministically extracted from these official government partitions without generative extrapolation."
         )
         return "\n".join(lines)
 

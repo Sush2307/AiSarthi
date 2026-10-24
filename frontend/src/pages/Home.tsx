@@ -101,7 +101,7 @@ export default function Home() {
               type="submit"
               className="btn absolute right-1.5 top-3.5 py-2 px-4 text-xs rounded-lg"
             >
-              Ask Sarthi
+              Ask InfoMed
             </button>
           </form>
 
@@ -260,7 +260,7 @@ export default function Home() {
             Transparent, Citation-Backed Health Intelligence
           </h2>
           <p className="muted text-xs sm:text-sm leading-relaxed">
-            AI Sarthi binds answers directly to verified rows in the master healthcare database rather than generating unverified statistical assertions.
+            InfoMed binds answers directly to verified rows in the master healthcare database rather than generating unverified statistical assertions.
           </p>
         </div>
 

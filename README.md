@@ -1,4 +1,4 @@
-# AI Sarthi — GovHealth-SLM 🏥🇮🇳
+# InfoMed — GovHealth-SLM 🏥🇮🇳
 
 > **An Evidence-Grounded Small Language Model & High-Performance Healthcare Data Intelligence Platform for India**
 
@@ -15,9 +15,9 @@
 
 ## 📌 Overview
 
-**AI Sarthi (GovHealth-SLM)** is a public healthcare analytics platform designed to solve one of the hardest challenges in digital health governance: **answering complex healthcare questions over millions of official Indian government records with guaranteed factual grounding and zero hallucinations.**
+**InfoMed (GovHealth-SLM)** is a public healthcare analytics platform designed to solve one of the hardest challenges in digital health governance: **answering complex healthcare questions over millions of official Indian government records with guaranteed factual grounding and zero hallucinations.**
 
-General-purpose commercial LLMs (ChatGPT, Gemini) frequently hallucinate public health statistics, confuse state averages with district figures, or cite obsolete metrics. **AI Sarthi** solves this via a **3-tier hybrid routing architecture**:
+General-purpose commercial LLMs (ChatGPT, Gemini) frequently hallucinate public health statistics, confuse state averages with district figures, or cite obsolete metrics. **InfoMed** solves this via a **3-tier hybrid routing architecture**:
 1. **Tier 1 (Frontier Hosted Inference)**: NVIDIA Nemotron-3-Ultra-550B with strict numerical grounding validation.
 2. **Tier 2 (Domain-Adapted SLM)**: Fine-tuned Qwen3-1.7B with 4-bit QLoRA specialized on Indian healthcare indicators.
 3. **Tier 3 (Deterministic Fact Engine)**: High-speed, indexed mathematical synthesis ensuring **100% availability** even during network outages, rate limits, or quota exhaustions.
@@ -26,7 +26,7 @@ General-purpose commercial LLMs (ChatGPT, Gemini) frequently hallucinate public 
 
 ## 📊 The Knowledge Base
 
-AI Sarthi indexes **1,180,313 official records** spanning **778 canonical healthcare indicators** across **all 28 States, 8 Union Territories, and 700+ Districts**:
+InfoMed indexes **1,180,313 official records** spanning **778 canonical healthcare indicators** across **all 28 States, 8 Union Territories, and 700+ Districts**:
 
 | Data Source | Full Name & Publishing Body | Primary Domain | Reporting Period |
 | :--- | :--- | :--- | :--- |

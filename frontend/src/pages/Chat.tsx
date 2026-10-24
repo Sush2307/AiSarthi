@@ -21,6 +21,7 @@ import { demoQuery } from "../demo";
 import type { EvidenceSummary, HealthRecord, HealthStatus } from "../types";
 import { CompareBar, RecordsTable } from "../components/common";
 import { FormattedMessage } from "../components/FormattedMessage";
+import { InfoMedIcon } from "../components/InfoMedLogo";
 import { SAMPLES } from "../constants";
 
 interface Msg {
@@ -45,11 +46,11 @@ interface Conv {
   msgs: Msg[];
 }
 
-const STORAGE_KEY = "sarthi-chats";
+const STORAGE_KEY = "infomed-chats";
 
 const loadConvs = (): Conv[] => {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    const raw = localStorage.getItem(STORAGE_KEY) || localStorage.getItem("sarthi-chats");
     if (!raw) return [];
     const parsed = JSON.parse(raw);
     if (!Array.isArray(parsed)) return [];
@@ -370,12 +371,12 @@ export default function Chat() {
           {/* Welcome Screen when Empty */}
           {!msgs.length && (
             <div className="py-10 text-center space-y-5 max-w-xl mx-auto">
-              <div className="mx-auto w-12 h-12 rounded-xl bg-brand-50 dark:bg-brand-950 flex items-center justify-center text-brand-800 dark:text-brand-300">
-                <Sparkles size={22} />
+              <div className="mx-auto flex items-center justify-center">
+                <InfoMedIcon size={52} />
               </div>
               <div className="space-y-1.5">
                 <h3 className="text-base font-bold text-pine-900 dark:text-white">
-                  Ask AI Sarthi about Indian Healthcare Data
+                  Ask InfoMed about Indian Healthcare Data
                 </h3>
                 <p className="muted text-xs leading-relaxed max-w-md mx-auto">
                   Inquiries are resolved by retrieving matching indicators from HMIS, NFHS-5, and AHS public datasets. Select an example to begin:

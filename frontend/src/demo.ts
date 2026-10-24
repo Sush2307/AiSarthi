@@ -97,7 +97,7 @@ export function demoWorkspaceCompare(body: WorkspaceCompareRequest): WorkspaceCo
         }
       : null,
     methodology: "Simulated deterministic comparative extraction for demonstration purposes.",
-    reproducibility_signature: "SARTHI-QUERY-DEMO-SIMULATED",
+    reproducibility_signature: "INFOMED-QUERY-DEMO-SIMULATED",
   };
 }
 

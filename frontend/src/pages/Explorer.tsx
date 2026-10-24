@@ -154,7 +154,7 @@ export default function Explorer() {
         <a
           href={live ? api.exportCsvUrl(query) : "#"}
           className="btn self-start sm:self-auto text-xs py-2 px-4 shadow-subtle shrink-0"
-          download="ai-sarthi-healthcare-records.csv"
+          download="infomed-healthcare-records.csv"
           title="Direct streaming CSV download from backend"
         >
           <Download size={14} />

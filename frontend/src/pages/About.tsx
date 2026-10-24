@@ -21,7 +21,7 @@ export default function About() {
           System Architecture & Documentation
         </div>
         <h1 className="text-2xl sm:text-3xl font-extrabold text-pine-900 dark:text-white">
-          About AI Sarthi (GovHealth-SLM)
+          About InfoMed (GovHealth-SLM)
         </h1>
         <p className="muted text-xs sm:text-sm mt-1 leading-relaxed">
           An open healthcare intelligence assistant engineered to make Indian public healthcare statistics accessible, searchable, and strictly grounded in official records.

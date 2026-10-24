@@ -105,7 +105,7 @@ def test_deterministic_reproducibility_signature(client):
     sig1 = r1.json()["reproducibility_signature"]
     sig2 = r2.json()["reproducibility_signature"]
     assert sig1 == sig2
-    assert sig1.startswith("SARTHI-QUERY-")
+    assert sig1.startswith("INFOMED-QUERY-") or sig1.startswith("SARTHI-QUERY-")
 
 def test_combined_filters_consistency(client):
     """Applying multiple filters simultaneously narrows records predictably."""

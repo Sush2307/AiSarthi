@@ -39,7 +39,7 @@ import type {
 } from "../types";
 import { CompareBar, exportCsv } from "../components/common";
 
-const WORKSPACE_STORAGE_KEY = "sarthi-saved-research";
+const WORKSPACE_STORAGE_KEY = "infomed-saved-research";
 
 // Curated high-impact public health indicators for fast 1-click comparison
 const CURATED_INDICATORS = [
@@ -158,7 +158,7 @@ export default function Workspace() {
   // Saved Analyses (localStorage)
   const [saved, setSaved] = useState<SavedAnalysis[]>(() => {
     try {
-      const raw = localStorage.getItem(WORKSPACE_STORAGE_KEY);
+      const raw = localStorage.getItem(WORKSPACE_STORAGE_KEY) || localStorage.getItem("sarthi-saved-research");
       return raw ? JSON.parse(raw) : [];
     } catch {
       return [];
@@ -953,7 +953,7 @@ export default function Workspace() {
                   <div>
                     <span className="muted block">Reproducibility Signature:</span>
                     <span className="font-mono font-semibold text-brand-800 dark:text-brand-400">
-                      {result.reproducibility_signature || "SARTHI-QUERY-DETERMINISTIC"}
+                      {result.reproducibility_signature || "INFOMED-QUERY-DETERMINISTIC"}
                     </span>
                   </div>
                 </div>

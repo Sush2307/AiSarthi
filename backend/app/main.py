@@ -1,4 +1,4 @@
-"""AI Sarthi API. Run: uvicorn app.main:app --reload --port 8000"""
+"""InfoMed API. Run: uvicorn app.main:app --reload --port 8000"""
 from __future__ import annotations
 import json
 import re
@@ -23,7 +23,7 @@ async def lifespan(app: FastAPI):
         app.state.model.load()
     yield
 
-app = FastAPI(title="AI Sarthi API", version="1.0.0", lifespan=lifespan)
+app = FastAPI(title="InfoMed API", version="1.0.0", lifespan=lifespan)
 app.add_middleware(CORSMiddleware, allow_origins=config.cors_origins(), allow_methods=["GET", "POST"], allow_headers=["*"])
 
 from fastapi.responses import Response
@@ -296,14 +296,14 @@ def chat(body: ChatIn, request: Request):
         except Exception:
             pass
 
-    # Check for greetings or capability inquiries (e.g. "Hello, what can AI Sarthi help me with?")
+    # Check for greetings or capability inquiries (e.g. "Hello, what can InfoMed help me with?")
     is_greeting = any(
         re.search(pattern, q_lower)
         for pattern in [
             r"^(hi|hello|hey|namaste|greetings)(\b|[!?.,\s]|$)",
-            r"what can (you|ai sarthi|this app|this) do",
-            r"what can (you|ai sarthi|this app|this) help",
-            r"how can (you|ai sarthi) help",
+            r"what can (you|infomed|ai sarthi|sarthi|this app|this) do",
+            r"what can (you|infomed|ai sarthi|sarthi|this app|this) help",
+            r"how can (you|infomed|ai sarthi|sarthi) help",
             r"^help(\b|[!?.,\s]|$)",
             r"who are you",
         ]
@@ -311,7 +311,7 @@ def chat(body: ChatIn, request: Request):
     if is_greeting and not any(loc_kw in q_lower for loc_kw in ["in ", "district", "state", "compare", "rate", "percent", "data", "records"]):
         return {
             "answer": (
-                "Hello! I am **AI Sarthi**, an evidence-grounded AI assistant for Indian public healthcare intelligence.\n\n"
+                "Hello! I am **InfoMed**, an evidence-grounded AI assistant for Indian public healthcare intelligence.\n\n"
                 "I synthesize official statistics across **1.18M+ government health records** (HMIS, NFHS-5, AHS) "
                 "and provide verified information on central & state healthcare schemes.\n\n"
                 "### How I can help you:\n"
@@ -348,7 +348,7 @@ def chat(body: ChatIn, request: Request):
     if any(kw in q_lower for kw in clinical_keywords) and not any(ind_w in q_lower for ind_w in ["indicator", "rate", "percent", "data", "records", "statistics", "report"]):
         return {
             "answer": (
-                "AI Sarthi is an evidence-grounded statistical querying system for Indian public health databases "
+                "InfoMed is an evidence-grounded statistical querying system for Indian public health databases "
                 "and does not provide clinical diagnoses, individualized medical advice, or drug prescriptions. "
                 "Please consult a qualified physician or visit your nearest primary health centre (PHC) or hospital immediately for proper medical evaluation."
             ),
@@ -531,7 +531,7 @@ def chat(body: ChatIn, request: Request):
         if intent == "comparison":
             clarification_answer = (
                 "You requested a comparative healthcare analysis, but no specific indicator or location pair was specified. "
-                "AI Sarthi can perform verified comparisons across districts or states.\n\n"
+                "InfoMed can perform verified comparisons across districts or states.\n\n"
                 "### Popular Indicators for District Comparison:\n"
                 "- **Institutional Deliveries (%)**: Proportion of live births delivered in health facilities.\n"
                 "- **Full Immunization (%)**: Children age 12-23 months fully vaccinated.\n"
@@ -654,7 +654,7 @@ def export_csv_endpoint(
     return Response(
         content=csv_str,
         media_type="text/csv",
-        headers={"Content-Disposition": 'attachment; filename="ai-sarthi-healthcare-records.csv"'},
+        headers={"Content-Disposition": 'attachment; filename="infomed-healthcare-records.csv"'},
     )
 
 @app.get("/api/workspace/indicators")

@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { Activity, BarChart3, Database, FileText, FlaskConical, Info, Menu, MessageSquare, Moon, Sun, X } from "lucide-react";
 import { useApi } from "../context";
 import { Disclaimer } from "./common";
+import { InfoMedLogo } from "./InfoMedLogo";
 
 const links = [
   { to: "/", label: "Home", icon: Activity },
@@ -98,24 +99,10 @@ export default function Layout({ children }: { children: ReactNode }) {
           {/* Logo / Brand */}
           <Link
             to="/"
-            className="flex items-center gap-3 shrink-0 focus-visible:rounded-lg focus-visible:outline-none"
+            className="flex items-center gap-3 shrink-0 focus-visible:rounded-lg focus-visible:outline-none group"
+            title="InfoMed - Indian Public Healthcare Intelligence Platform"
           >
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-800 text-white shadow-subtle">
-              <Activity size={18} className="stroke-[2.5]" aria-hidden />
-            </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="font-extrabold tracking-tight text-pine-900 dark:text-white text-base sm:text-lg">
-                  AI Sarthi
-                </span>
-                <span className="rounded bg-ivory-200 px-1.5 py-0.5 text-[10px] font-mono font-semibold uppercase tracking-wider text-brand-900 dark:bg-[#1D2D27] dark:text-[#A2C7B1]">
-                  GovHealth-SLM
-                </span>
-              </div>
-              <p className="text-[11px] text-pine-500 dark:text-[#ABC1B7] hidden sm:block">
-                Indian Public Healthcare Intelligence Platform
-              </p>
-            </div>
+            <InfoMedLogo size={36} />
           </Link>
 
           {/* Desktop Navigation */}
@@ -185,7 +172,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           <Disclaimer />
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs muted pt-3 border-t border-ivory-200 dark:border-[#2D3F37]">
             <p>
-              <b className="text-pine-900 dark:text-[#EDF4F0]">AI Sarthi (GovHealth-SLM)</b> · National Public Healthcare Retrieval & Grounded Intelligence.
+              <b className="text-pine-900 dark:text-[#EDF4F0]">InfoMed (GovHealth-SLM)</b> · National Public Healthcare Retrieval & Grounded Intelligence.
             </p>
             <p className="font-mono text-pine-500 dark:text-[#ABC1B7]">
               HMIS · NFHS-5 · AHS · Qwen3-1.7B QLoRA · FastAPI · React 18
